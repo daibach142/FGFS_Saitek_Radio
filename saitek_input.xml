@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<generic>
+
+		<input>
+			<line_separator>\n</line_separator>
+			<var_separator>,</var_separator>
+
+			<chunk>
+				<name>Device</name>
+				<type>string</type>
+				<node>/saitek_radio_panel/device</node>
+			</chunk>
+
+			<chunk>
+				<name>Action</name>
+				<node>/saitek_radio_panel/action</node>
+			</chunk>
+			
+		</input>
+	
+	</generic>	
+</PropertyList>

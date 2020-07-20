@@ -1,0 +1,3 @@
+#!/bin/bash
+# moves Nasal script to .fgfs directory
+cp *.nas ~/.fgfs/Nasal
