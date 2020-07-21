@@ -2,6 +2,9 @@
 
 Driver Saitek Radio Panel for flightgear under Linux
 
+This program requires that shared library 'libudev1' is installed. On Ubuntu,
+'sudo apt install libudev1' would do the trick
+
 ### 
 copy saitek_input.xml and saitek_output.xml to $FG_ROOT/Protocol
 copy Saitek.nas  to ~/.fgfs/Nasal/
@@ -14,15 +17,15 @@ which should eliminate the problem (This on Ubuntu 18.04.4 Bionic)
 
 /usr/games/fgfs \
 	...
-	--generic=socket,out,30,127.0.0.1,49001,udp,saitek_output 
-	--generic=socket,in,30,,49002,udp,saitek_input
+	--generic=socket,out,30,127.0.0.1,49001,udp,saitek_output \
+	--generic=socket,in,30,,49002,udp,saitek_input \
 	...
 
 
 ## run driver - you will be asked to operate a control on the radio panel
 	./SaitekRadioPanel
 
-The complete Eclipse project is also provided in 'EclipseSaitekRadioPanel.tar.gz'
+The complete Eclipse project is also provided in 'EclipseSaitekRadioPanel.tgz'
 
 I (Dave Attwood 2020 dave@attwoods.org.uk) would like to acknowledge and was inspired by an 
 original version of this software (Halim DJERROUD 2016 hdd@ai.univ-paris8.fr) of which a few
