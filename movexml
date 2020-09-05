@@ -1,3 +1,0 @@
-#!/bin/bash
-# moves protocol files to Flightgear main directory
-sudo cp *.xml /usr/share/games/flightgear/Protocol

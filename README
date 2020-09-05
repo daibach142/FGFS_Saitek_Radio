@@ -1,32 +1,35 @@
+DRIVER FOR SAITEK RADIO PANEL
+=============================
 
+Two versions of the driver are provided:
+   1. Linux with or without using libudev
+   2. Raspberry Pi, probably for use with Windows
+   
+To install this product on Linux, follow the instructions in INSTALL.
 
-Driver Saitek Radio Panel for flightgear under Linux
-
-This program requires that shared library 'libudev1' is installed. On Ubuntu,
-'sudo apt install libudev1' would do the trick
-
-### 
-copy saitek_input.xml and saitek_output.xml to $FG_ROOT/Protocol
-copy Saitek.nas  to ~/.fgfs/Nasal/
-Scripts 'movenas' and 'movexml' will do this for you
-If the radio panel produces mouse commands, run the script 'stripper'
-which should eliminate the problem (This on Ubuntu 18.04.4 Bionic)
+For Windows, copy the download the file Raspberry.zip to your
+machine, unzip and follow those instructions.
 
 ##
  run flightgear with options : 
 
-/usr/games/fgfs \
 	...
-	--generic=socket,out,30,127.0.0.1,49001,udp,saitek_output \
-	--generic=socket,in,30,,49002,udp,saitek_input \
+	--generic=socket,out,30,127.0.0.1,49001,udp,saitek_output 
+	--generic=socket,in,30,,49002,udp,saitek_input 
 	...
 
 
 ## run driver - you will be asked to operate a control on the radio panel
-	./SaitekRadioPanel
+	StartPanel
 
-The complete Eclipse project is also provided in 'EclipseSaitekRadioPanel.tgz'
+
+If the radio panel produces mouse commands, run 'demouseify'
+which should eliminate the problem (This on Ubuntu 18.04.4 Bionic)
+The complete source code is also provided, but not required for installation
 
 I (Dave Attwood 2020 dave@attwoods.org.uk) would like to acknowledge and was inspired by an 
 original version of this software (Halim DJERROUD 2016 hdd@ai.univ-paris8.fr) of which a few
-fragments remain.
+fragments remain. Robert Feal-Martinez inspired, tested (and contributed to) the development of the
+Raspberry Pi version.
+
+For problems or issues either enter an issue on Github, or email stkrp@attwoods.org.uk.
