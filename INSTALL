@@ -1,0 +1,15 @@
+INSTALLATION
+============
+
+If installing without libudev, determine the device address of the Radio Panel, it's
+probably /dev/hidraw2.
+
+Type:
+	./configure
+	make
+	sudo make install
+
+The driver can then be started with the command 'StartPanel'
+
+
+

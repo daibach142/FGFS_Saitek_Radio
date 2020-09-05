@@ -1,0 +1,5 @@
+#!/bin/bash
+# Disable the X input device
+id=`xinput list | grep -P "Saitek.*Radio" | grep -oP "id=\d+" | grep -oP "\d+"`
+xinput --disable $id
+
