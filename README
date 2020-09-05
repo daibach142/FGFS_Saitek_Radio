@@ -8,7 +8,9 @@ Two versions of the driver are provided:
 To install this product on Linux, follow the instructions in INSTALL.
 
 For Windows, copy the download the file Raspberry.zip to your
-machine, unzip and follow those instructions.
+machine, unzip and follow the instructions given in the zip file.
+
+For Linux:
 
 ##
  run flightgear with options : 
