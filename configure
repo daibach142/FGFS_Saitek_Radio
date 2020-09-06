@@ -11,9 +11,14 @@ defaultUdev="n"
 udevprog="SaitekRadioPaneludev"
 noudevprog="SaitekRadioPanelnoudev"
 
-read -p "Device address (default is $defaultDevice): " devaddr
-read -p "Flightgear computer (default is $defaultIP): " ipaddr
 read -p "Do you want the libudev version (y or n) (default is $defaultUdev): " udev
+if [ $udev == 'n' ] 
+then
+	read -p "Device address (default is $defaultDevice): " devaddr
+else
+	devaddr="TBC"
+fi
+read -p "Flightgear computer (default is $defaultIP): " ipaddr
 
 Options="--device ${devaddr:-$defaultDevice} --flightgear ${ipaddr:-$defaultIP}"
 #echo "arguments are: $Options"

@@ -24,9 +24,9 @@ For Linux:
 ## run driver - you will be asked to operate a control on the radio panel
 	StartPanel
 
+The X windows configuration is modified so that the Radio Panel is ignored as
+a mouse device.
 
-If the radio panel produces mouse commands, run 'demouseify'
-which should eliminate the problem (This on Ubuntu 18.04.4 Bionic)
 The complete source code is also provided, but not required for installation
 
 I (Dave Attwood 2020 dave@attwoods.org.uk) would like to acknowledge and was inspired by an 
