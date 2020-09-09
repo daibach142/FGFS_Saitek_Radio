@@ -11,9 +11,18 @@ defaultUdev="n"
 udevprog="SaitekRadioPaneludev"
 noudevprog="SaitekRadioPanelnoudev"
 
+echo "The libudev version will determine the device name for the Saitek Radio Panel."
+echo "If not using the libudev version, determine the device address for the Saitek radio Panel"
+echo "  by plugging it in and doing 'ls /dev/hid*'."
+echo "The Flightgear computer address is usually running on the same machine, so 127.0.0.1 "
+echo "  is a suitably value. If Flightgear is running remotely, specify its address."
+echo " "
+echo "The full installation sequence (./configure; make; sudo make install) can be run"
+echo "  whenever a configuration change is required."
+echo " "
+
 read -p "Do you want the libudev version (y or n) (default is $defaultUdev): " udev
-if [ $udev == 'n' ] 
-then
+if [ ${udev:-"n"} = "n" ];  then
 	read -p "Device address (default is $defaultDevice): " devaddr
 else
 	devaddr="TBC"

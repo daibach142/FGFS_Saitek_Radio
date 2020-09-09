@@ -1,11 +1,18 @@
-
+#
 # Simple makefile
 #
 SaitekRadioPanel: 
 	$(error Run ./configure first)
 
 
-PHONY: install clean uninstall
+PHONY: install clean uninstall help
+
+help:
+	@echo "     'make help'      produces this text."
+	@echo "     'make'           with no options make the Radio Panel."
+	@echo "'sudo make install'   moves all files to their locations."     
+	@echo "'sudo make uninstall' removes all installed files."
+	@echo "     'make clean'     removes some generated files."
 
 install:
 	cp SaitekRadioPanel /usr/games
