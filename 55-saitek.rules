@@ -1,0 +1,8 @@
+# Saitek Radio device
+# may need adding for joystick and throttles
+
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="06a3", ATTRS{idProduct}=="0d05", \
+    ATTRS{manufacturer}=="Saitek", \
+    ATTRS{product}=="Pro Flight Radio Panel", \
+    MODE="666"
+

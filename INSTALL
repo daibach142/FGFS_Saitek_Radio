@@ -9,6 +9,9 @@ Type:
 	make
 	sudo make install
 
+If the Radio Panel is plugged in, disconnect and reconnect it to change the access
+permissions.
+
 The driver can then be started with the command 'StartPanel'
 
 
